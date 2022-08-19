@@ -104,7 +104,7 @@ body {
 
 /* Scroll bar style */
 body::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-track {
@@ -120,4 +120,57 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background: hsl(0, 0%, 70%);
+}
+
+/* REUSE STYLE */
+
+/* MAIN STYLE */
+.overlay {
+  position: fixed;
+  background: hsla(0, 0%, 0%, 0.5);
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 15;
+  transition: 0.5s ease;
+  top: 0;
+  left: 0;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modal syle */
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 10;
+  animation: popup 1s ease-in-out 5s forwards;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
 }
