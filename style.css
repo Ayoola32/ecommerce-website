@@ -22,7 +22,7 @@
   --onyx: hsl(0, 0%, 27%);
 
   /**
-   * typography
+   * FONT SIZES
    */
 
   --fs-1: 1.563rem;
@@ -37,6 +37,7 @@
   --fs-10: 0.688rem;
   --fs-11: 0.625rem;
 
+  /* Weigh size */
   --weight-300: 300;
   --weight-400: 400;
   --weight-500: 500;
@@ -159,7 +160,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   /* opacity: 0; */
   /* visibility: hidden; */
-  pointer-events: none;
+  /* pointer-events: none; */
   z-index: 10;
   /* animation: popup 1s ease-in-out 5s forwards; */
 }
@@ -270,4 +271,8 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: var(--border-radius-sm);
   margin: auto;
   transition: var(--transition-timing);
+}
+
+.btn-newsletter:hover {
+  background: var(--salmon-pink);
 }
