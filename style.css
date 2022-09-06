@@ -126,6 +126,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* REUSE STYLE */
 
 /* MAIN STYLE */
+/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
