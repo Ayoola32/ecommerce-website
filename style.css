@@ -261,6 +261,11 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 16px;
 }
 
+.email-field:focus {
+  outline: none !important;
+  border: 2px solid var(--salmon-pink);
+}
+
 .btn-newsletter {
   background: var(--eerie-black);
   color: var(--white);
