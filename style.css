@@ -125,9 +125,16 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* REUSE STYLE */
+.container {
+  padding: 0 15px;
+}
 
 /* MAIN STYLE */
-/* Overlay */
+
+/*****************
+       OVERLAY
+       
+*****************/
 .overlay {
   position: fixed;
   top: 0;
@@ -146,8 +153,10 @@ body::-webkit-scrollbar-thumb:hover {
   pointer-events: all;
 }
 
-/* Modal syle */
-
+/*****************
+       MODAL STYLE
+       
+*****************/
 .modal {
   position: fixed;
   top: 0;
@@ -282,7 +291,10 @@ body::-webkit-scrollbar-thumb:hover {
   background: var(--salmon-pink);
 }
 
-/* notification toast */
+/*****************
+       NOTIFICATION TOAST
+       
+*****************/
 .notification-toast {
   position: fixed;
   left: 20px;
@@ -364,4 +376,76 @@ body::-webkit-scrollbar-thumb:hover {
 .toast-meta {
   font-size: var(--fs-10);
   color: var(--sonic-silver);
+}
+
+/*****************
+       header
+       
+*****************/
+.header-top,
+.header-user-actions,
+.desktop-nav-menu {
+  display: none;
+}
+
+.header-main {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--cultured);
+}
+
+.header-logo {
+  margin-bottom: 20px;
+}
+
+.header-logo a {
+  margin: auto;
+}
+
+.header-search {
+  position: relative;
+}
+
+.header-search .search-field {
+  font-size: var(--fs-7);
+  color: var(--onyx);
+  padding: 10px 15px;
+  padding-right: 50px;
+  border: 1px solid var(--cultured);
+  border-radius: var(--border-radius-md);
+}
+
+.search-field::--webkit-search-cancel-button {
+  display: none;
+}
+
+.search-btn {
+  background: var(--white);
+  position: absolute;
+  top: 5%;
+  right: 2px;
+  color: var(--onyx);
+  transform: translateX(-50%);
+  font-size: 18px;
+  padding: 8px 15px;
+  transition: color var(--transition-timing);
+}
+
+.search-btn:hover {
+  color: var(--salmon-pink);
+}
+
+.mobile-button-nav {
+  background: var(--white);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.25);
 }
