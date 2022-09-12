@@ -129,6 +129,28 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 0 15px;
 }
 
+.has-scrollbar {
+  padding-bottom: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: 3.5px solid var(--white);
+  border-radius: 20px;
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 90%);
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 80%);
+}
 /* MAIN STYLE */
 
 /*****************
@@ -395,10 +417,12 @@ body::-webkit-scrollbar-thumb:hover {
 
 .header-logo {
   margin-bottom: 20px;
+  display: flex;
 }
 
 .header-logo a {
   margin: auto;
+  color: var(--eerie-black);
 }
 
 .header-search {
@@ -408,7 +432,7 @@ body::-webkit-scrollbar-thumb:hover {
 .header-search .search-field {
   font-size: var(--fs-7);
   color: var(--onyx);
-  padding: 10px 15px;
+  padding: 9px 15px;
   padding-right: 50px;
   border: 1px solid var(--cultured);
   border-radius: var(--border-radius-md);
@@ -421,12 +445,12 @@ body::-webkit-scrollbar-thumb:hover {
 .search-btn {
   background: var(--white);
   position: absolute;
-  top: 5%;
+  top: 13%;
   right: 2px;
   color: var(--onyx);
   transform: translateX(-50%);
-  font-size: 18px;
-  padding: 8px 15px;
+  font-size: 15px;
+  padding: 6px 2px;
   transition: color var(--transition-timing);
 }
 
@@ -448,4 +472,147 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   padding: 5px 0;
   box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.25);
+  z-index: 5;
+}
+
+.mobile-button-nav .action-btn {
+  position: relative;
+  font-size: 22px;
+  color: var(--eerie-black);
+  padding: 10px;
+}
+
+.mobile-button-nav .count {
+  background: var(--bittersweet);
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  font-weight: var(--weight-500);
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 15px;
+}
+
+.mobile-nav-menu {
+  background: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+  overflow: scroll;
+  overscroll-behavior: contain;
+  visibility: hidden;
+  transition: 0.5s ease;
+  z-index: 20;
+}
+
+.mobile-nav-menu.active {
+  left: 0;
+  visibility: visible;
+}
+
+.mobile-nav-menu .menu-top {
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--cultured);
+}
+
+.menu-top .menu-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--salmon-pink);
+}
+
+.menu-top .menu-close-btn {
+  font-size: 18px;
+  color: var(--eerie-black);
+}
+
+.mobile-menu-catg-list {
+  margin-bottom: 30px;
+}
+
+.menu-catg .dropdown-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu-catg-list .menu-catg {
+  border-bottom: 1px solid var(--cultured);
+}
+
+.mobile-menu-catg-list .menu-title {
+  color: var(--onyx);
+  font-size: var(--fs-6);
+  font-weight: var(--weight-500);
+  padding: 12px 0;
+}
+
+.dropdown-menu > div {
+  font-size: 12px;
+  font-weight: var(--weight-200);
+  color: var(--onyx);
+}
+
+.dropdown-menu.active .fa-plus,
+.dropdown-menu .fa-minus {
+  display: none;
+}
+
+.dropdown-menu .fa-plus,
+.dropdown-menu.active .fa-minus {
+  display: block;
+}
+
+.menu-catg .submenu-catg-list {
+  margin-left: 10px;
+}
+
+.menu-bottom .menu-catg-list {
+  margin-bottom: 20px;
+}
+
+.menu-bottom .submenu-catg {
+  border-bottom: none;
+}
+
+.menu-bottom .menu-title {
+  font-size: var(--fs-6);
+  font-weight: var(--weight-500);
+  color: var(--eerie-black);
+  padding: 12px 0;
+}
+
+.dropdown-menu.active.fa-caret-left {
+  transition: rotate(-0.25turn);
+}
+
+.submenu-catg-list {
+  display: none;
+}
+
+.menu-social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-social-container .social-link {
+  background: var(--cultured);
+  color: var(--eerie-black);
+  font-size: 14px;
+  padding: 2px 5px;
+  border-radius: var(--border-radius-sm);
 }
